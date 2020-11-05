@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700;900&display=swap');
+@import 'assets/sass/utils/colors';
+@import 'assets/sass/utils/typography';
+
+* {
+  box-sizing: border-box;
+  color: var(--color-dark-blue);
+  font-family: 'Gilroy', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: rgba(#000, 0.7);
+  margin: 0;
+}

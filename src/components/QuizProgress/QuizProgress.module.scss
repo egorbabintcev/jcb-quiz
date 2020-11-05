@@ -1,0 +1,38 @@
+@import 'assets/sass/utils/functions';
+
+.wrapper {
+  margin-bottom: rem(30);
+}
+
+.text {
+  font-size: rem(18);
+  margin: 0;
+  margin-bottom: rem(15);
+
+  strong {
+    color: var(--color-quiz);
+    font-weight: 700;
+    margin-left: rem(7);
+  }
+}
+
+.bar {
+  background-color: rgba(#333, 0.15);
+  border-radius: rem(4);
+  max-height: rem(10);
+  max-width: 100%;
+  min-height: rem(10);
+  min-width: 100%;
+  position: relative;
+}
+
+.barline {
+  background-color: var(--color-quiz);
+  border-radius: inherit;
+  box-shadow: rem(2) 0px rem(6) rem(1) lightness(var(--color-quiz), 0.35);
+  left: 0;
+  min-height: 100%;
+  position: absolute;
+  top: 0;
+  transition: width .2s;
+}

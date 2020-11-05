@@ -1,0 +1,8 @@
+@import 'assets/sass/utils/mixins';
+
+:root {
+  @include defineColorRGB(--color-border, #333333);
+  @include defineColorRGB(--color-quiz, #42ABE6);
+  @include defineColorRGB(--color-default-text, #2A323A);
+  @include defineColorRGB(--color-bg-sidebar, #f7f7f7);
+}
