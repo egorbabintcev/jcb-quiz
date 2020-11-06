@@ -1,16 +1,20 @@
 import React from 'react';
 import { observer } from 'mobx-react';
 import Store from 'Stores';
-import QuizStep from 'components/QuizStep';
-import Result from 'components/Result';
+import QuizBody from 'components/QuizBody';
 import QuizSidebar from 'components/QuizSidebar';
+import QuizProgress from 'components/QuizProgress';
+import QuizTitle from 'components/QuizTitle';
+import QuizAnswers from 'components/QuizAnswers';
+import QuizControls from 'components/QuizControls';
+import Result from 'components/Result';
+import QuizHint from 'components/QuizHint';
 import styles from './App.module.scss';
 
 const App = observer(() => {
   const {
     step,
     curQtn,
-    curQtn: { hint = '' },
     incStep,
     decStep,
     isFinished,
@@ -19,22 +23,41 @@ const App = observer(() => {
 
   return (
     <div className={styles.wrapper}>
-      <div className={styles.step}>
+      <QuizBody>
         {
           !isFinished
             ? (
-              <QuizStep
-                step={step}
-                curQtn={curQtn}
-                incStep={incStep}
-                decStep={decStep}
-                qtnsLength={qtns.length}
-              />
+              <>
+                <QuizProgress step={step} length={qtns.length} />
+                <QuizTitle title={curQtn.title} step={step} />
+                <QuizAnswers
+                  answers={curQtn.answers}
+                  type={curQtn.type}
+                  checkAnswer={curQtn.checkAnswer}
+                />
+                <div className={styles.spacer} />
+                <QuizControls
+                  step={step}
+                  incStep={incStep}
+                  decStep={decStep}
+                  answers={curQtn.answers}
+                />
+              </>
             )
-            : <Result qtns={qtns} />
+            : (
+              <>
+                <QuizProgress step={step - 1} length={qtns.length} />
+                <Result qtns={qtns} />
+              </>
+            )
         }
-      </div>
-      <QuizSidebar hint={hint} />
+      </QuizBody>
+      <QuizSidebar>
+        {
+          !isFinished
+          && <QuizHint hint={curQtn?.hint ? curQtn.hint : ''} />
+        }
+      </QuizSidebar>
     </div>
   );
 });
