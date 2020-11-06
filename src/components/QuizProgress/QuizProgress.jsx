@@ -1,18 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import cx from 'classnames';
 import styles from './QuizProgress.module.scss';
 
 const QuizProgress = (props) => {
-  const { step, length } = props;
+  const { step, length, isFinished } = props;
   const percentage = Math.round(((step + 1) / length) * 100) - 10;
 
   return (
     <div className={styles.wrapper}>
       <p className={styles.text}>
-        Готово: <strong className="highlighted">{percentage}%</strong>
+        {
+          !isFinished
+            ? `Шаг ${step + 1} из ${length}`
+            : 'Завершено'
+        }
       </p>
       <div className={styles.bar}>
-        <div className={styles.barline} style={{ width: `${percentage}%` }} />
+        <div
+          className={cx(styles.barline, { [styles.barline_finished]: isFinished })}
+          style={{ width: `${isFinished ? '100' : percentage}%` }}
+        />
       </div>
     </div>
   );
@@ -21,6 +29,11 @@ const QuizProgress = (props) => {
 QuizProgress.propTypes = {
   step: PropTypes.number.isRequired,
   length: PropTypes.number.isRequired,
+  isFinished: PropTypes.bool,
+};
+
+QuizProgress.defaultProps = {
+  isFinished: false,
 };
 
 export default QuizProgress;

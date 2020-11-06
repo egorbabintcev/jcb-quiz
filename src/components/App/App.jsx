@@ -46,7 +46,7 @@ const App = observer(() => {
             )
             : (
               <>
-                <QuizProgress step={step - 1} length={qtns.length} />
+                <QuizProgress isFinished />
                 <Result qtns={qtns} />
               </>
             )
