@@ -4,10 +4,14 @@
 
 * {
   box-sizing: border-box;
-  color: var(--color-dark-blue);
-  font-family: 'Gilroy', sans-serif;
+  color: var(--color-text-2);
+  font-family: 'Museo Sans Cyrl', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  &::after, &::before {
+    box-sizing: border-box;
+  }
 }
 
 body {

@@ -2,7 +2,14 @@
 
 :root {
   @include defineColorRGB(--color-border, #333333);
+  @include defineColorRGB(--color-text-1, #575757);
+  @include defineColorRGB(--color-text-2, #000000);
   @include defineColorRGB(--color-quiz, #42ABE6);
+  @include defineColorRGB(--color-gradient-1, #FF8609);
+  @include defineColorRGB(--color-gradient-2, #FFA142);
+  @include defineColorRGB(--color-gradient-3, #0CF66A);
+  @include defineColorRGB(--color-gradient-4, #0BDA45);
+  @include defineColorRGB(--color-bg-1, #F7F7F9);
   @include defineColorRGB(--color-default-text, #2A323A);
   @include defineColorRGB(--color-bg-sidebar, #f7f7f7);
 }
