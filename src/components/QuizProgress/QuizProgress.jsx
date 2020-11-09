@@ -27,12 +27,14 @@ const QuizProgress = (props) => {
 };
 
 QuizProgress.propTypes = {
-  step: PropTypes.number.isRequired,
-  length: PropTypes.number.isRequired,
+  step: PropTypes.number,
+  length: PropTypes.number,
   isFinished: PropTypes.bool,
 };
 
 QuizProgress.defaultProps = {
+  step: 0,
+  length: 0,
   isFinished: false,
 };
 
