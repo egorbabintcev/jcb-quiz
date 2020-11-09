@@ -1,0 +1,105 @@
+@import 'assets/sass/utils/functions';
+
+.wrapper {
+  height: rem(150);
+  margin-bottom: rem(20);
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  height: calc(100% - #{rem(20)} * 2);
+  left: 50%;
+  object-fit: contain;
+  object-position: bottom;
+  position: absolute;
+  top: rem(15);
+  transform: translateX(-50%);
+  width: calc(100% - #{rem(15)} * 2);
+  z-index: 2;
+}
+
+.input {
+  display: none;
+
+  &:checked + .wrapper .radio {
+    background-color: var(--color-gradient-2);
+
+    &::before {
+      background-color: #fff;
+    }
+  }
+
+  & + .wrapper .radio {
+    background-color: #F3F3F5;
+    box-shadow: inset 0px rem(3) rem(2) rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    display: block;
+    max-height: rem(40);
+    max-width: rem(40);
+    min-height: rem(40);
+    min-width: rem(40);
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -50%);
+    transition: background-color .25s, border-color .2s, box-shadow .2s;
+    z-index: 2;
+
+    &::before {
+      background-color: transparent;
+      border-radius: 50%;
+      content: '';
+      display: block;
+      height: rem(13);
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      transition: opacity .2s, background-color .2s;
+      width: rem(13);
+    }
+  }
+}
+
+.label {
+  border-radius: rem(8);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: rem(66);
+  max-height: rem(200);
+  max-width: rem(190);
+  min-height: rem(200);
+  min-width: rem(190);
+  transition: box-shadow .25s;
+  user-select: none;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  &:nth-last-child(n+3) {
+    margin-bottom: rem(20);
+  }
+}
+
+.bg {
+  background-color: #fff;
+  border-radius: rem(25);
+  box-shadow: rem(1) rem(2) rem(11) rgba(0, 0, 0, 0.07);
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.text {
+  font-size: rem(16);
+  font-weight: 300;
+  margin: 0;
+  max-height: rem(60);
+  text-align: center;
+}

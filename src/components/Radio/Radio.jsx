@@ -1,21 +1,23 @@
 import React from 'react';
 import { observer } from 'mobx-react';
-import styles from './QuizAnswer.module.scss';
+import styles from './Radio.module.scss';
 
-const QuizAnswer = observer((props) => {
+/* eslint-disable react/prop-types */
+const Radio = (props) => {
   const {
-    id,
-    title,
+    answer: {
+      id,
+      title,
+      isChecked,
+    },
     checkAnswer,
-    isChecked,
-    type,
   } = props;
 
   return (
     <label className={styles.label} htmlFor={id}>
       <input
         className={styles.input}
-        type={type}
+        type="radio"
         name="variant"
         id={id}
         onChange={checkAnswer.bind(null, id)}
@@ -26,6 +28,6 @@ const QuizAnswer = observer((props) => {
       <h4 title={title} className={styles.text}>{title}</h4>
     </label>
   );
-});
+};
 
-export default QuizAnswer;
+export default observer(Radio);

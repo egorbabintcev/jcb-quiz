@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import QuizAnswer from 'components/QuizAnswer';
+import Radio from 'components/Radio';
+import RadioImage from 'components/RadioImage';
 import styles from './QuizAnswers.module.scss';
 
 const QuizAnswers = (props) => {
@@ -8,16 +9,29 @@ const QuizAnswers = (props) => {
 
   return (
     <div className={styles.list}>
-      {answers.map((answer) => (
-        <QuizAnswer
-          type={type}
-          key={answer.id}
-          id={answer.id}
-          title={answer.title}
-          checkAnswer={checkAnswer}
-          isChecked={answer.isChecked}
-        />
-      ))}
+      {answers.map((answer) => {
+        switch (type) {
+          case 'radio':
+            return (
+              <Radio
+                key={answer.id}
+                answer={answer}
+                checkAnswer={checkAnswer}
+              />
+            );
+
+          case 'pictureRadio':
+            return (
+              <RadioImage
+                key={answer.id}
+                answer={answer}
+                checkAnswer={checkAnswer}
+              />
+            );
+          default:
+            return '';
+        }
+      })}
     </div>
   );
 };

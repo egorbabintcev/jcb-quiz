@@ -32,6 +32,15 @@ export class RadioQuestion extends Question {
   }
 }
 
+export class PictureRadioQuestion extends RadioQuestion {
+  type = 'pictureRadio';
+
+  constructor(title, answers, hint) {
+    super(title, answers, hint);
+    makeObservable(this);
+  }
+}
+
 export class CheckboxQuestion extends Question {
   type='checkbox'
 
