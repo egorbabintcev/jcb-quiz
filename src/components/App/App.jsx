@@ -7,7 +7,7 @@ import QuizProgress from 'components/QuizProgress';
 import QuizTitle from 'components/QuizTitle';
 import QuizAnswers from 'components/QuizAnswers';
 import QuizControls from 'components/QuizControls';
-import Result from 'components/Result';
+import TUPage from 'components/TUPage';
 import QuizHint from 'components/QuizHint';
 import styles from './App.module.scss';
 
@@ -47,7 +47,7 @@ const App = observer(() => {
             : (
               <>
                 <QuizProgress isFinished />
-                <Result qtns={qtns} />
+                <TUPage />
               </>
             )
         }

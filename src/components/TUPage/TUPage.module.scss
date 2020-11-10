@@ -1,0 +1,86 @@
+@import 'assets/sass/utils/functions';
+
+.title {
+  font: {
+    size: rem(32);
+    weight: 300;
+  }
+  margin: 0;
+  margin-bottom: rem(15);
+}
+
+.subtitle {
+  color: #838B98;
+  font: {
+    size: rem(18);
+    weight: 300;
+  }
+  line-height: 1.5;
+  margin: 0;
+  margin-bottom: rem(80);
+}
+
+.gifts {
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    margin-bottom: rem(30);
+    text-align: center;
+  }
+
+  &_wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.gift {
+  background: linear-gradient(270deg, rgba(254, 206, 106, 0.84) -26.67%, rgba(254, 155, 54, 0.84) 138.33%);
+  border-radius: rem(8);
+  max-height: rem(215);
+  max-width: rem(210);
+  min-height: rem(215);
+  min-width: rem(210);
+  position: relative;
+
+  &::before {
+    border: rem(1) solid #FEC26D;
+    border-radius: rem(9);
+    content: '';
+    display: block;
+    height: calc(100% + #{rem(10)});
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% + #{rem(10)});
+  }
+
+  .title {
+    bottom: rem(25);
+    font: {
+      size: rem(14);
+      weight: 300;
+    }
+    left: rem(9);
+    margin-bottom: 0;
+    position: absolute;
+    right: rem(9);
+
+    strong {
+      font: {
+        size: rem(16);
+        weight: 500;
+      }
+    }
+  }
+
+  img {
+    left: 50%;
+    min-height: rem(110);
+    position: absolute;
+    transform: translateX(-50%);
+    top: rem(20);
+  }
+}
