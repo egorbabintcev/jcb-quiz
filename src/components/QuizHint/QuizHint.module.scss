@@ -1,53 +1,72 @@
 @import 'assets/sass/utils/functions';
 
-.avatar {
-  align-items: flex-end;
+.manager {
+  align-items: center;
   display: flex;
-  margin-bottom: rem(25);
-
-  img {
-    background-color: var(--color-quiz);
-    border-radius: 50%;
-    display: block;
-    margin-right: rem(10);
-    max-height: rem(70);
-    max-width: rem(70);
-    min-height: rem(70);
-    min-width: rem(70);
-  }
+  margin-bottom: rem(20);
 
   h4 {
-    font-size: rem(18);
+    font: {
+      size: rem(22);
+      weight: 100;
+    }
     margin: 0;
     margin-bottom: rem(5);
   }
 
   p {
-    font-size: rem(15);
+    color: var(--color-lighter-text);
+    font: {
+      size: rem(16);
+      weight: 100;
+    }
     margin: 0;
+
+    strong {
+      color: inherit;
+      font-weight: 500;
+    }
+  }
+}
+
+.avatar {
+  margin-right: rem(15);
+  position: relative;
+
+  &::before {
+    background-color: var(--color-gradient-3);
+    border: rem(2) solid #fff;
+    border-radius: 50%;
+    bottom: 0;
+    content: '';
+    display: block;
+    max-height: rem(15);
+    max-width: rem(15);
+    min-height: rem(15);
+    min-width: rem(15);
+    position: absolute;
+    right: 0;
+    transform: translate(#{rem(-7)}, #{rem(-7)});
+  }
+
+  img {
+    border-radius: 50%;
+    display: block;
+    max-height: rem(100);
+    max-width: rem(100);
+    min-height: rem(100);
+    min-width: rem(100);
   }
 }
 
 .hint {
-  background-color: #fff;
-  border-radius: rem(6);
-  box-shadow: 0px rem(1) rem(4) 0px rgba(0, 0, 0, 0.25);
-  line-height: 1.2  ;
-  margin: 0;
-  padding: rem(12);
-  position: relative;
-
-  &::before {
-    border-style: solid;
-    border-width: 0 rem(7) rem(7) rem(7);
-    border-color: transparent transparent #fff transparent;
-    content: '';
-    display: block;
-    height: 0;
-    left: rem(30);
-    position: absolute;
-    top: 0;
-    transform: translateY(-100%);
-    width: 0;
+  background-color: var(--color-bg-1);
+  border-radius: rem(10);
+  font: {
+    size: rem(16);
+    weight: 300;
   }
+  line-height: 1.5;
+  margin: 0;
+  padding: rem(15);
 }
