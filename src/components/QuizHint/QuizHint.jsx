@@ -23,6 +23,7 @@ const QuizHint = () => {
       <p className={styles.hint}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores natus laudantium, necessitatibus a quibusdam voluptas, sunt ut voluptatum veniam aliquam, eum similique. Ab aperiam exercitationem perferendis esse in sunt sapiente itaque amet voluptatem! Corporis, quos nobis quae expedita nostrum modi?
       </p>
+      <a href="#" className={styles.link}>Получить консультацию</a>
     </div>
   );
 };

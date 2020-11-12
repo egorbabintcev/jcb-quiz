@@ -1,5 +1,11 @@
 @import 'assets/sass/utils/functions';
 
+.wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
 .manager {
   align-items: center;
   display: flex;
@@ -68,5 +74,19 @@
   }
   line-height: 1.5;
   margin: 0;
+  margin-bottom: rem(20);
   padding: rem(15);
+}
+
+.link {
+  color: var(--color-gradient-2);
+  font: {
+    size: rem(14);
+    weight: 700;
+  }
+  letter-spacing: 0.03em;
+  margin: 0;
+  text-align: center;
+  text-decoration: underline;
+  text-transform: uppercase;
 }
