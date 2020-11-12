@@ -10,6 +10,7 @@ import QuizControls from 'components/QuizControls';
 import TUPage from 'components/TUPage';
 import QuizHint from 'components/QuizHint';
 import QuizGifts from 'components/QuizGifts';
+import QuizSubmitForm from 'components/QuizSubmitForm';
 import styles from './App.module.scss';
 
 const App = observer(() => {
@@ -56,12 +57,13 @@ const App = observer(() => {
       <QuizSidebar>
         {
           !isFinished
-          && (
-            <>
-              <QuizHint hint={curQtn?.hint ? curQtn.hint : ''} />
-              <QuizGifts />
-            </>
-          )
+            ? (
+              <>
+                <QuizHint hint={curQtn?.hint ? curQtn.hint : ''} />
+                <QuizGifts />
+              </>
+            )
+            : <QuizSubmitForm />
         }
       </QuizSidebar>
     </div>
