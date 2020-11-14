@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { v4 } from 'uuid';
 import styles from './QuizControls.module.scss';
 import arrow from './arrow.svg';
 
@@ -43,7 +42,7 @@ QuizControls.propTypes = {
   decStep: PropTypes.func.isRequired,
   incStep: PropTypes.func.isRequired,
   answers: PropTypes.arrayOf(PropTypes.shape({
-    id: typeof v4,
+    id: PropTypes.string,
     title: PropTypes.string,
     isChecked: PropTypes.bool,
   })).isRequired,
