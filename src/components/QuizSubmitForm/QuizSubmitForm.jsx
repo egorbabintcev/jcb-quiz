@@ -1,14 +1,25 @@
 import React, { useState } from 'react';
 import cx from 'classnames';
+import PropTypes from 'prop-types';
+import { serializeArray } from 'utils';
 import styles from './QuizSubmitForm.module.scss';
 import sprite from './social-icons.svg';
 
-const QuizSubmitForm = () => {
+const QuizSubmitForm = (props) => {
+  const { qtns } = props;
   const [messenger, setMessenger] = useState('whatsapp');
 
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log(e.target);
+    const formData = serializeArray(e.target);
+    formData.answers = [];
+    qtns.forEach((q) => {
+      formData.answers.push([
+        q.title,
+        q.answers.filter((a) => a.isChecked).map((a) => a.title).join(' ,'),
+      ]);
+    });
+    console.log(formData);
   };
 
   return (
@@ -69,7 +80,7 @@ const QuizSubmitForm = () => {
         <div>
           <h3 className={styles.title}>Введите контактные данные</h3>
           {/* eslint-disable jsx-a11y/label-has-associated-control */}
-          <input className={styles.input} type="text" placeholder={`Введите ваш ${messenger}`} />
+          <input className={styles.input} type="text" name="phone" placeholder={`Введите ваш ${messenger}`} />
         </div>
         <div>
           {/* eslint-disable jsx-a11y/label-has-associated-control */}
@@ -85,6 +96,10 @@ const QuizSubmitForm = () => {
       </form>
     </div>
   );
+};
+
+QuizSubmitForm.propTypes = {
+  qtns: PropTypes.arrayOf(PropTypes.any).isRequired,
 };
 
 export default QuizSubmitForm;
