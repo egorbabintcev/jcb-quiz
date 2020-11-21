@@ -56,16 +56,6 @@ const QuizSubmitForm = (props) => {
               </div>
             </label>
             <label>
-              <input type="radio" name="contact_type" value="вконтакте" onChange={(e) => setMessenger(e.target.value)} />
-              <div className={styles.item}>
-                <span className={cx(styles.bg, styles.vk)} />
-                <svg className={styles.icon}>
-                  <use xlinkHref={`${sprite}#vk`} />
-                </svg>
-                <span className={styles.text}>ВКонтакте</span>
-              </div>
-            </label>
-            <label>
               <input type="radio" name="contact_type" value="viber" onChange={(e) => setMessenger(e.target.value)} />
               <div className={styles.item}>
                 <span className={cx(styles.bg, styles.viber)} />
@@ -86,7 +76,7 @@ const QuizSubmitForm = (props) => {
           {/* eslint-disable jsx-a11y/label-has-associated-control */}
           <button type="submit" className={styles.btn}>Получить подбор запчасти + подарки</button>
           <label>
-            <input type="checkbox" name="policy_agreement" required />
+            <input type="checkbox" required />
             <span className={styles.small}>
               Я даю разрешение на обработку моих персональных
               данных согласно правилам конфиденциальности
