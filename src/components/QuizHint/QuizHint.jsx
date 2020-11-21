@@ -1,11 +1,12 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import styles from './QuizHint.module.scss';
 import avatar from './avatar.png';
 
 /* eslint-disable */
 
-const QuizHint = () => {
+const QuizHint = (props) => {
+  const { hint } = props;
   return (
     <div className={styles.wrapper}>
       <div className={styles.manager}>
@@ -20,20 +21,19 @@ const QuizHint = () => {
           </p>
         </div>
       </div>
-      <p className={styles.hint}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores natus laudantium, necessitatibus a quibusdam voluptas, sunt ut voluptatum veniam aliquam, eum similique. Ab aperiam exercitationem perferendis esse in sunt sapiente itaque amet voluptatem! Corporis, quos nobis quae expedita nostrum modi?
-      </p>
+      <div dangerouslySetInnerHTML={{ __html: hint }} className={styles.hint}>
+      </div>
       <a href="#" className={styles.link}>Получить консультацию</a>
     </div>
   );
 };
 
-// QuizHint.propTypes = {
-//   hint: PropTypes.string,
-// };
+QuizHint.propTypes = {
+  hint: PropTypes.string,
+};
 
-// QuizHint.defaultProps = {
-//   hint: '',
-// };
+QuizHint.defaultProps = {
+  hint: '',
+};
 
 export default QuizHint;

@@ -63,7 +63,7 @@ const App = observer(() => {
                 <QuizGifts />
               </>
             )
-            : <QuizSubmitForm />
+            : <QuizSubmitForm qtns={qtns} />
         }
       </QuizSidebar>
     </div>

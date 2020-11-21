@@ -76,6 +76,40 @@
   margin: 0;
   margin-bottom: rem(20);
   padding: rem(15);
+
+  strong {
+    display: block;
+    font-weight: 400;
+    margin-bottom: rem(10);
+  }
+
+  p {
+    font-weight: 100;
+    margin: 0;
+    margin-bottom: rem(7);
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  ul {
+    list-style-position: inside;
+    margin: 0;
+    padding: 0;
+
+    li::marker {
+      margin-right: rem(3);
+    }
+
+    li:not(:last-child) {
+      margin-bottom: rem(15);
+    }
+
+    strong {
+      display: inline;
+    }
+  }
 }
 
 .link {
