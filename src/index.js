@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from 'components/App';
+import App from 'src/components/App';
 import './index.scss';
 
 /* eslint-disable react/jsx-filename-extension */

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Radio from 'components/Radio';
-import RadioImage from 'components/RadioImage';
+import Radio from 'src/components/Radio';
+import RadioImage from 'src/components/RadioImage';
 import styles from './QuizAnswers.module.scss';
 
 const QuizAnswers = (props) => {

@@ -1,9 +1,9 @@
 import React from 'react';
 import { observer } from 'mobx-react';
-import QuizAnswer from 'components/QuizAnswer';
-import QuizTitle from 'components/QuizTitle';
-import QuizControls from 'components/QuizControls';
-import QuizProgress from 'components/QuizProgress';
+import QuizAnswer from 'src/components/QuizAnswer';
+import QuizTitle from 'src/components/QuizTitle';
+import QuizControls from 'src/components/QuizControls';
+import QuizProgress from 'src/components/QuizProgress';
 import styles from './QuizStep.module.scss';
 
 const QuizStep = observer((props) => {

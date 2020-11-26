@@ -1,16 +1,16 @@
 import React from 'react';
 import { observer } from 'mobx-react';
-import Store from 'Stores';
-import QuizBody from 'components/QuizBody';
-import QuizSidebar from 'components/QuizSidebar';
-import QuizProgress from 'components/QuizProgress';
-import QuizTitle from 'components/QuizTitle';
-import QuizAnswers from 'components/QuizAnswers';
-import QuizControls from 'components/QuizControls';
-import TUPage from 'components/TUPage';
-import QuizHint from 'components/QuizHint';
-import QuizGifts from 'components/QuizGifts';
-import QuizSubmitForm from 'components/QuizSubmitForm';
+import Store from 'src/Stores';
+import QuizBody from 'src/components/QuizBody';
+import QuizSidebar from 'src/components/QuizSidebar';
+import QuizProgress from 'src/components/QuizProgress';
+import QuizTitle from 'src/components/QuizTitle';
+import QuizAnswers from 'src/components/QuizAnswers';
+import QuizControls from 'src/components/QuizControls';
+import TUPage from 'src/components/TUPage';
+import QuizHint from 'src/components/QuizHint';
+import QuizGifts from 'src/components/QuizGifts';
+import QuizSubmitForm from 'src/components/QuizSubmitForm';
 import styles from './App.module.scss';
 
 const App = observer(() => {
