@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
-    "baseUrl": "src",
-    "experimentalDecorators": true
+    "baseUrl": ".",
+    "experimentalDecorators": true,
+    "useDefineForClassFields": true
   },
-  "include": ["src"]
+  "include": ["."]
 }
