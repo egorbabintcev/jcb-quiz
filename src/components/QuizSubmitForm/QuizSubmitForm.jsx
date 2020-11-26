@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
-import { serializeArray } from 'utils';
+import { serializeArray } from 'src/utils';
 import styles from './QuizSubmitForm.module.scss';
 import sprite from './social-icons.svg';
 

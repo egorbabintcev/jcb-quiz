@@ -5,7 +5,7 @@ import {
   makeObservable,
 } from 'mobx';
 import { v4 } from 'uuid';
-import { RadioQuestion, PictureRadioQuestion } from 'Stores/Question';
+import { RadioQuestion, PictureRadioQuestion } from 'src/Stores/Question';
 
 const data = [
   new PictureRadioQuestion('На какой технике работаете?', [
