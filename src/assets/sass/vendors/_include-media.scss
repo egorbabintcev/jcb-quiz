@@ -1,5 +1,6 @@
 $breakpoints: (
-
+  'lg': 1176px,
+  'sm': 480px,
 );
 
 @import '~include-media/dist/include-media';

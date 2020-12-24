@@ -1,5 +1,7 @@
 @import "assets/sass/utils/functions";
 
+@import "assets/sass/vendors/include-media";
+
 .title {
   margin: 0;
   margin-bottom: rem(15);
@@ -14,6 +16,10 @@
   line-height: 1.5;
   margin: 0;
   margin-bottom: rem(80);
+
+  @include media("<=sm") {
+    margin-bottom: 0;
+  }
   font: {
     size: rem(18);
     weight: 300;
@@ -23,6 +29,10 @@
 .gifts {
   display: flex;
   flex-direction: column;
+
+  @include media("<=sm") {
+    display: none;
+  }
 
   .title {
     margin-bottom: rem(30);

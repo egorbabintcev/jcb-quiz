@@ -47,16 +47,12 @@
   cursor: pointer;
   display: block;
   max-height: rem(60);
-  max-width: 50%;
+  max-width: 100%;
   min-height: rem(60);
-  min-width: 50%;
+  min-width: 100%;
   position: relative;
   transition: box-shadow .25s;
   user-select: none;
-
-  &:nth-last-child(n+3) {
-    margin-bottom: rem(20);
-  }
 }
 
 .bg {

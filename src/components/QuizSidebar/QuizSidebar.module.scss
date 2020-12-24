@@ -1,5 +1,7 @@
 @import "assets/sass/utils/functions";
 
+@import "assets/sass/vendors/include-media";
+
 .sidebar {
   display: flex;
   flex-direction: column;
@@ -7,4 +9,9 @@
   min-height: 100%;
   min-width: rem(414);
   padding: rem(40) rem(35);
+
+  @include media("<=sm") {
+    max-width: 100%;
+    min-width: 100%;
+  }
 }

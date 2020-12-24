@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700;900&display=swap');
 @import 'assets/sass/utils/colors';
 @import 'assets/sass/utils/typography';
+@import "assets/sass/vendors/include-media";
 
 * {
   box-sizing: border-box;
@@ -11,6 +12,15 @@
 
   &::after, &::before {
     box-sizing: border-box;
+  }
+}
+
+html {
+  @include media('<=lg') {
+    font-size: 1.36vw;
+  }
+  @include media('<=sm') {
+    font-size: 3.33vw;
   }
 }
 

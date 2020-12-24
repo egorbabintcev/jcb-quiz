@@ -1,20 +1,30 @@
 @import "assets/sass/utils/functions";
 
+@import "assets/sass/vendors/include-media";
+
 .group {
-  bottom: 0;
-  // border-top: rem(1) solid lightness(var(--color-border), 0.1);
   display: flex;
-  justify-content: flex-end;
-  left: 0;
-  padding: 0 rem(30) rem(40);
-  position: absolute;
-  width: 100%;
+
+  @include media(">sm") {
+    bottom: 0;
+    // border-top: rem(1) solid lightness(var(--color-border), 0.1);
+    justify-content: flex-end;
+    left: 0;
+    padding: 0 rem(30) rem(40);
+    position: absolute;
+    width: 100%;
+  }
+
+  @include media("<=sm") {
+    justify-content: center;
+  }
 }
 
 .btn {
   background: none;
   border: 0;
   cursor: pointer;
+  padding: 0;
   position: relative;
 
   &:focus {
@@ -37,6 +47,13 @@
   min-height: rem(50);
   min-width: rem(50);
 
+  @include media("<=sm") {
+    max-height: rem(60);
+    max-width: rem(60);
+    min-height: rem(60);
+    min-width: rem(60);
+  }
+
   &:hover {
     box-shadow: 0 rem(1) rem(3) 0 rgba(#000, .1);
   }
@@ -45,10 +62,10 @@
     fill: rgba(#000, .45);
     display: block;
     left: 50%;
-    max-height: rem(20);
-    max-width: rem(20);
-    min-height: rem(20);
-    min-width: rem(20);
+    max-height: 40%;
+    max-width: 40%;
+    min-height: 40%;
+    min-width: 40%;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -71,6 +88,14 @@
   min-width: rem(200);
   text-transform: uppercase;
   transition: opacity .2s;
+
+  @include media("<=sm") {
+    font-size: rem(22);
+    max-height: rem(60);
+    max-width: rem(240);
+    min-height: rem(60);
+    min-width: rem(240);
+  }
   font: {
     size: rem(18);
     weight: 800;
