@@ -1,6 +1,7 @@
 import React from 'react';
 import { observer } from 'mobx-react';
-import Store from 'src/Stores';
+import PropTypes from 'prop-types';
+import Store from 'src/Stores/Store';
 import QuizBody from 'src/components/QuizBody';
 import QuizSidebar from 'src/components/QuizSidebar';
 import QuizProgress from 'src/components/QuizProgress';
@@ -13,7 +14,7 @@ import QuizGifts from 'src/components/QuizGifts';
 import QuizSubmitForm from 'src/components/QuizSubmitForm';
 import styles from './App.module.scss';
 
-const App = observer(() => {
+const App = ({ store }) => {
   const {
     step,
     curQtn,
@@ -21,7 +22,7 @@ const App = observer(() => {
     decStep,
     isFinished,
     qtns,
-  } = Store;
+  } = store;
 
   return (
     <div className={styles.wrapper}>
@@ -68,6 +69,10 @@ const App = observer(() => {
       </QuizSidebar>
     </div>
   );
-});
+};
 
-export default App;
+App.propTypes = {
+  store: PropTypes.instanceOf(Store).isRequired,
+};
+
+export default observer(App);

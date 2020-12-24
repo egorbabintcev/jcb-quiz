@@ -4,9 +4,9 @@ import styles from './QuizHint.module.scss';
 import avatar from './avatar.png';
 
 /* eslint-disable */
-
 const QuizHint = (props) => {
   const { hint } = props;
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.manager}>
@@ -21,7 +21,7 @@ const QuizHint = (props) => {
           </p>
         </div>
       </div>
-      <div dangerouslySetInnerHTML={{ __html: hint }} className={styles.hint}>
+      <div data-testid="hint-wrapper" dangerouslySetInnerHTML={{ __html: hint }} className={styles.hint}>
       </div>
       <a href="#" className={styles.link}>Получить консультацию</a>
     </div>

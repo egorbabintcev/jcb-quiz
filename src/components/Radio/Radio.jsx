@@ -1,8 +1,8 @@
 import React from 'react';
 import { observer } from 'mobx-react';
+import PropTypes from 'prop-types';
 import styles from './Radio.module.scss';
 
-/* eslint-disable react/prop-types */
 const Radio = (props) => {
   const {
     answer: {
@@ -28,6 +28,24 @@ const Radio = (props) => {
       <h4 title={title} className={styles.text}>{title}</h4>
     </label>
   );
+};
+
+Radio.propTypes = {
+  answer: PropTypes.exact({
+    id: PropTypes.string,
+    title: PropTypes.string,
+    isChecked: PropTypes.bool,
+  }),
+  checkAnswer: PropTypes.func,
+};
+
+Radio.defaultProps = {
+  answer: {
+    id: '',
+    title: '',
+    isChecked: false,
+  },
+  checkAnswer: () => {},
 };
 
 export default observer(Radio);

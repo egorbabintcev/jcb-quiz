@@ -18,6 +18,7 @@ const QuizProgress = (props) => {
       </p>
       <div className={styles.bar}>
         <div
+          data-testid="percentage-bar"
           className={cx(styles.barline, { [styles.barline_finished]: isFinished })}
           style={{ width: `${isFinished ? '100' : percentage}%` }}
         />

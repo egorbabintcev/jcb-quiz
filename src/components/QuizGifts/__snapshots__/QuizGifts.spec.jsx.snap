@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`QuizGifts component Should render component with title and 3 gifts 1`] = `
+<DocumentFragment>
+  <div
+    class="gifts"
+  >
+    <h4
+      class="title"
+    >
+      Гарантированные подарки:
+    </h4>
+    <div
+      class="gifts_wrapper"
+    >
+      <div
+        class="gift"
+      >
+        <img
+          alt=""
+          src="prices.png"
+        />
+        <p
+          class="title"
+        >
+          <strong>
+            3 варианта цены
+          </strong>
+          <br />
+           на оригинал, аналог или б/у
+        </p>
+      </div>
+      <div
+        class="gift"
+      >
+        <img
+          alt=""
+          src="gloves.png"
+        />
+        <p
+          class="title"
+        >
+          <strong>
+            Перчатки
+            <br />
+             в подарок
+          </strong>
+        </p>
+      </div>
+      <div
+        class="gift"
+      >
+        <img
+          alt=""
+          src="chat.png"
+        />
+        <p
+          class="title"
+        >
+          <strong>
+            Фото и видео запчастей
+          </strong>
+          <br />
+           пришлем в Whatsapp
+        </p>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
