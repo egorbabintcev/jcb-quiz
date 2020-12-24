@@ -24,6 +24,10 @@
       size: rem(22);
       weight: 100;
     }
+
+    @include media("<=sm") {
+      font-size: rem(24);
+    }
   }
 
   p {
@@ -32,6 +36,10 @@
     font: {
       size: rem(16);
       weight: 100;
+    }
+
+    @include media("<=sm") {
+      font-size: rem(18);
     }
 
     strong {
@@ -81,6 +89,10 @@
   font: {
     size: rem(16);
     weight: 300;
+  }
+
+  @include media("<=sm") {
+    font-size: rem(18);
   }
 
   strong {
