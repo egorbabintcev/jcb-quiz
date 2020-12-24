@@ -75,8 +75,13 @@ const QuizSubmitForm = (props) => {
         <div>
           {/* eslint-disable jsx-a11y/label-has-associated-control */}
           <button type="submit" className={styles.btn}>Получить подбор запчасти + подарки</button>
-          <label>
-            <input type="checkbox" required />
+          <label htmlFor="policyAgreement">
+            <input
+              name="policyAgreement"
+              type="checkbox"
+              required
+              checked
+            />
             <span className={styles.small}>
               Я даю разрешение на обработку моих персональных
               данных согласно правилам конфиденциальности
