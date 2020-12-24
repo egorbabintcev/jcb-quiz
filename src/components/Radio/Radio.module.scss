@@ -1,4 +1,4 @@
-@import 'assets/sass/utils/functions';
+@import "assets/sass/utils/functions";
 
 .input {
   display: none;
@@ -12,8 +12,8 @@
   }
 
   & + .radio {
-    background-color: lightness(var(--color-border), 0.15);
-    box-shadow: inset 0px rem(3) rem(2) rgba(0, 0, 0, 0.05);
+    background-color: lightness(var(--color-border), .15);
+    box-shadow: inset 0px rem(3) rem(2) rgba(0, 0, 0, .05);
     border-radius: 50%;
     display: block;
     max-height: rem(40);
@@ -29,7 +29,7 @@
     &::before {
       background-color: transparent;
       border-radius: 50%;
-      content: '';
+      content: "";
       display: block;
       height: rem(13);
       left: 50%;

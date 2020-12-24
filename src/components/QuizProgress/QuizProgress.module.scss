@@ -1,4 +1,4 @@
-@import 'assets/sass/utils/functions';
+@import "assets/sass/utils/functions";
 
 .wrapper {
   margin-bottom: rem(30);
@@ -7,16 +7,16 @@
 
 .text {
   color: var(--color-text-1);
-  font: {
-    size: rem(18);
-    weight: 100;
-  }
   left: 50%;
   margin: 0;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -52%);
   z-index: 2;
+  font: {
+    size: rem(18);
+    weight: 100;
+  }
 
   strong {
     color: var(--color-quiz);
@@ -46,15 +46,15 @@
 
   &::before {
     animation: progress 1s linear infinite;
-    background: {
-      image: linear-gradient(135deg,rgba(255, 255, 255, 0.1) 25%,transparent 0,transparent 50%,rgba(255, 255, 255, 0.1) 0,rgba(255, 255, 255, 0.1) 75%,transparent 0,transparent);
-      position: 0 0;
-      size: rem(20) rem(20);
-    }
-    content: '';
+    content: "";
     height: 100%;
     position: absolute;
     width: 100%;
+    background: {
+      image: linear-gradient(135deg,rgba(255, 255, 255, .1) 25%,transparent 0,transparent 50%,rgba(255, 255, 255, .1) 0,rgba(255, 255, 255, .1) 75%,transparent 0,transparent);
+      position: 0 0;
+      size: rem(20) rem(20);
+    }
   }
 
   &_finished {
@@ -63,9 +63,11 @@
 }
 
 @keyframes progress {
+
   from {
     background-position: 0 0;
   }
+
   to {
     background-position: rem(20) 0;
   }

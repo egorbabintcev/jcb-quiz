@@ -1,12 +1,12 @@
-@import 'assets/sass/utils/functions';
+@import "assets/sass/utils/functions";
 
 .title {
+  margin: 0;
+  margin-bottom: rem(20);
   font: {
     size: rem(18);
     weight: 100;
   }
-  margin: 0;
-  margin-bottom: rem(20);
 }
 
 .gifts {
@@ -27,15 +27,15 @@
   max-height: rem(110);
 
   .title {
-    font: {
-      size: rem(12);
-      weight: 100;
-    }
     line-height: 1.3;
     margin: 0;
     margin-bottom: auto;
     max-width: rem(120);
     text-align: center;
+    font: {
+      size: rem(12);
+      weight: 100;
+    }
 
     strong {
       font: {

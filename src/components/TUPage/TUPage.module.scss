@@ -1,23 +1,23 @@
-@import 'assets/sass/utils/functions';
+@import "assets/sass/utils/functions";
 
 .title {
+  margin: 0;
+  margin-bottom: rem(15);
   font: {
     size: rem(32);
     weight: 300;
   }
-  margin: 0;
-  margin-bottom: rem(15);
 }
 
 .subtitle {
   color: #838B98;
+  line-height: 1.5;
+  margin: 0;
+  margin-bottom: rem(80);
   font: {
     size: rem(18);
     weight: 300;
   }
-  line-height: 1.5;
-  margin: 0;
-  margin-bottom: rem(80);
 }
 
 .gifts {
@@ -36,7 +36,7 @@
 }
 
 .gift {
-  background: linear-gradient(270deg, rgba(254, 206, 106, 0.84) -26.67%, rgba(254, 155, 54, 0.84) 138.33%);
+  background: linear-gradient(270deg, rgba(254, 206, 106, .84) -26.67%, rgba(254, 155, 54, .84) 138.33%);
   border-radius: rem(8);
   max-height: rem(215);
   max-width: rem(210);
@@ -47,7 +47,7 @@
   &::before {
     border: rem(1) solid #FEC26D;
     border-radius: rem(9);
-    content: '';
+    content: "";
     display: block;
     height: calc(100% + #{rem(10)});
     left: 50%;
@@ -59,14 +59,14 @@
 
   .title {
     bottom: rem(25);
-    font: {
-      size: rem(14);
-      weight: 300;
-    }
     left: rem(9);
     margin-bottom: 0;
     position: absolute;
     right: rem(9);
+    font: {
+      size: rem(14);
+      weight: 300;
+    }
 
     strong {
       font: {

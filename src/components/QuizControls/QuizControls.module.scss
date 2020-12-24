@@ -1,4 +1,4 @@
-@import 'assets/sass/utils/functions';
+@import "assets/sass/utils/functions";
 
 .group {
   bottom: 0;
@@ -13,7 +13,7 @@
 
 .btn {
   background: none;
-  border: none;
+  border: 0;
   cursor: pointer;
   position: relative;
 
@@ -29,7 +29,7 @@
 .btn_prev {
   composes: btn;
 
-  border: rem(3) solid lightness(var(--color-border), 0.15);
+  border: rem(3) solid lightness(var(--color-border), .15);
   border-radius: 50%;
   margin-right: rem(15);
   max-height: rem(50);
@@ -38,11 +38,11 @@
   min-width: rem(50);
 
   &:hover {
-    box-shadow: 0 rem(1) rem(3) 0 rgba(#000, 0.1);
+    box-shadow: 0 rem(1) rem(3) 0 rgba(#000, .1);
   }
 
   svg {
-    fill: rgba(#000, 0.45);
+    fill: rgba(#000, .45);
     display: block;
     left: 50%;
     max-height: rem(20);
@@ -63,11 +63,7 @@
   border-radius: rem(10);
   color: #fff;
   display: flex;
-  font: {
-    size: rem(18);
-    weight: 800;
-  }
-  letter-spacing: 0.03em;
+  letter-spacing: .03em;
   justify-content: center;
   max-height: rem(50);
   max-width: rem(200);
@@ -75,8 +71,12 @@
   min-width: rem(200);
   text-transform: uppercase;
   transition: opacity .2s;
+  font: {
+    size: rem(18);
+    weight: 800;
+  }
 
   &[disabled] {
-    opacity: 0.5;
+    opacity: .5;
   }
 }
