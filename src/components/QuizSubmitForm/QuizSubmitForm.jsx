@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
+import InputMask from 'react-input-mask';
 import { serializeArray } from 'src/utils';
 import styles from './QuizSubmitForm.module.scss';
 import sprite from './social-icons.svg';
@@ -70,17 +71,23 @@ const QuizSubmitForm = (props) => {
         <div>
           <h3 className={styles.title}>Введите контактные данные</h3>
           {/* eslint-disable jsx-a11y/label-has-associated-control */}
-          <input className={styles.input} type="text" name="phone" placeholder={`Введите ваш ${messenger}`} />
+          <InputMask
+            mask="+7 (999) 999 99-99"
+            className={styles.input}
+            type="text"
+            name="phone"
+            placeholder={`Введите ваш ${messenger}`}
+          />
         </div>
         <div>
           {/* eslint-disable jsx-a11y/label-has-associated-control */}
           <button type="submit" className={styles.btn}>Получить подбор запчасти + подарки</button>
           <label htmlFor="policyAgreement">
             <input
-              name="policyAgreement"
+              id="policyAgreement"
               type="checkbox"
               required
-              checked
+              defaultChecked
             />
             <span className={styles.small}>
               Я даю разрешение на обработку моих персональных
